@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Durden Library</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Durden Library</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Про сайт</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Галерея</a>
+      <a href="#news" onclick="slowScroll('#news')" title="Контакты">Новини</a>
+      <a href="#" onclick="slowScroll('#footer')" title="Ответы на вопросы">Контакти</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Бібліотека університету Durden </h1>
+    <h3>Бібліотека Durden – це інтелектуальний та культурний центр, важлива частина університету Durden. Вона пропонує студентам та викладачам багатий вибір актуальних дослідницьких матеріалів, електронних ресурсів та літератури різних жанрів.</h3>
+<div class="photo-container">
+  <img src="https://www.rsl.ru/photo/!_ORS/6-NOVOSTI/2020/leninka-online/litres-b.jpg" alt="Фотография 1">
+  <p class="caption">Відкрийте двері у світ знань із бібліотекою Durden.</p>
+</div>
+
+<div class="photo-container">
+  <img src="https://mar-nvk.ukr.school/wp-content/uploads/sites/35/2021/12/YAk-stvoryty-biblioteku-v-klasi-NUSH-e1580139347113.jpg" alt="Фотография 2">
+  <p class="caption">Глибокі думки на кожній полиці – у бібліотеці Durden</p>
+</div>
+
+<div class="photo-container">
+  <img src="https://www.barabooka.com.ua/wp-content/uploads/2019/01/biblioteki1.jpg" alt="Фотография 2">
+  <p class="caption">Джерело натхнення та навчання - бібліотека Durden</p>
+</div>
+
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Про бібліотеку</h2>
+      
+    </div>
+    <div class="text">
+	
+      <span>Бібліотека Durden - це джерело неперевершеної освіти та унікальних можливостей для студентів та дослідників. З багатим та різноманітним зібранням літератури та ресурсів, вона є центром інтелектуального зростання та академічного розвитку. Бібліотека Durden відрізняється своєю інноваційністю та пропонує доступ до сучасних електронних баз даних та провідних видань, що дозволяє нашим студентам та факультету бути попереду у наукових дослідженнях та розвитку. Ми також пишаємось своїм професійним персоналом, який завжди готовий допомогти з пошуком інформації, розвитком інформаційної грамотності та підтримкою в академічній роботі. Загалом бібліотека Durden - це простір, де ідеї народжуються, знання розширюються і потенціал студентів здійснюється.</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    
+  
+    <h1>Галерея  </h1>
+    
+	<div class="slider-container">
+  <div class="slider">
+    <div class="slide">
+      <img src="slide1.jpg" alt="Slide 1">
+    </div>
+    <div class="slide">
+      <img src="slide2.jpg" alt="Slide 2">
+    </div>
+    <div class="slide">
+      <img src="slide3.jpg" alt="Slide 3">
+    </div>
+    <button class="prev-button" onclick="previousSlide()">&#10094;</button>
+    <button class="next-button" onclick="nextSlide()">&#10095;</button>
+  </div>
+</div>
+  </div>
+  
+<script>
+var slides = document.querySelectorAll('.slide');
+var currentSlide = 0;
+
+function showSlide(index) {
+  if (index < 0) {
+    index = slides.length - 1;
+  } else if (index >= slides.length) {
+    index = 0;
+  }
+
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+
+  slides[index].style.display = 'block';
+  currentSlide = index;
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function previousSlide() {
+  showSlide(currentSlide - 1);
+}
+
+showSlide(currentSlide);
+</script>
+
+ <section id="news" class="section projects">
+        <h2 class="section__title">Новини</h2>
+
+        <div class="projects__grid">
+          <div class="project">
+            <h3>Безкоштовний сервіс</h3>
+            <p class="project__description">
+              Університет Durden радо оголошує про запуск нової послуги - безкоштовної доставки книг для студентів та факультету. Тепер користувачі можуть замовляти книги онлайн та отримувати їх у зручний час та місце без необхідності відвідувати бібліотеку.
+            </p>
+
+          </div>
+
+          <div class="project">
+            <h3>Літературний конкурс "Слова творять магію"</h3>
+            <p class="project__description">
+              Бібліотека Durden запрошує всіх студентів та працівників університету прийняти участь у літературному конкурсі "Слова творять магію". Учасники можуть подати свої твори у різних жанрах - від поезії до короткої прози, і матимуть можливість виграти цінні призи та опублікувати свої роботи в університетському журналі.
+            </p>
+            
+          </div>
+
+          <div class="project">
+            <h3>Серію вебінарів з дослідницьких навичок</h3>
+            <p class="project__description">
+              У бібліотеці Durden розпочинається серія вебінарів з дослідницьких навичок. Учасники матимуть змогу ознайомитись з ефективними методами пошуку та оцінки наукових джерел, а також навчитись складати літературні огляди та наукові презентації. Вебінари відкриті для всіх бажаючих студентів та викладачів університету Durden.
+            </p>
+            
+          </div>
+        </div>
+      </section>
+
+  <section id="footer">
+<div class="wrapper">
+<footer class="footer">
+  	 <div class="container">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>Durden Library</h4>
+  	 			<ul>
+  	 				<li><a href="#"onclick="openPage1('about.html')" title="Про сайт" >Про сайт</a></li>
+  	 				<li><a href="#"onclick="openPage2('gallery')"    title="Галерея картинок">Галерея Картинок</a></li>
+  	 				<li><a href="#" onclick="openPage3('news')"      title="Новости">Новости</a></li>
+  	 				<li><a href="#"onclick="openPage4('conctans')"   title="Контакты">Контакты</a></li>
+				
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>Горячая линия</h4>
+  	 			<ul>
+  	 				<li><a href="#">Звонки принимаются с 10:00-18:00</a></li>
+  	 				<li><a href="#">+3806799999999</a></li>
+  	 				<li><a href="#">+3806799999999</a></li>
+  	 				<li><a href="#">+3806799999999</a></li>
+  	 				
+  	 			</ul>
+  	 		</div>
+
+  	 		<div class="footer-col">
+  	 			<h4>Следите за библиотекой</h4>
+  	 			<div class="social-links">
+				
+  	 				<a href="https://www.instagram.com/thienlaoqwe/"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="https://www.instagram.com/thienlaoqwe/"><i class="fab fa-twitter"></i></a>
+  	 				<a href="https://www.instagram.com/thienlaoqwe/"><i class="fab fa-instagram"></i></a>
+  	 				<a href="https://www.instagram.com/thienlaoqwe/"><i class="fab fa-linkedin-in"></i></a>
+					
+  	 			</div>
+				<div class="google-maps">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10348.61851583386!2d34.5669365!3d49.5759721!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d82f64cd0cbd85%3A0x528a08266c1d4938!2z0J3QsNGG0ZbQvtC90LDQu9GM0L3QuNC5INGD0L3RltCy0LXRgNGB0LjRgtC10YIgwqvQn9C-0LvRgtCw0LLRgdGM0LrQsCDQv9C-0LvRltGC0LXRhdC90ZbQutCwINGW0LzQtdC90ZYg0K7RgNGW0Y8g0JrQvtC90LTRgNCw0YLRjtC60LDCuw!5e0!3m2!1sru!2sua!4v1687359351059!5m2!1sru!2sua" width="600" height="250" style="border:0;" allowfullscreen="" scrolling="no" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  	 	</div>
+		</div>
+  	 	</div>
+  	 </div>
+	 </div>
+  </footer>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
